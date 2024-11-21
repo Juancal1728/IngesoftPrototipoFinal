@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Profesores</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/admin-panel.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Íconos -->
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        <img src="images/logoIcesi2.png" alt="Logo Icesi">
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main-container">
+    <!-- Notificaciones -->
+    <section class="notifications">
+        <h2><i class="fas fa-bell"></i> Notificaciones</h2>
+        <ul class="notification-list">
+            <li><i class="fas fa-check-circle"></i> Última actualización: Calificaciones enviadas al SNIES.</li>
+            <li><i class="fas fa-exclamation-triangle"></i> Error pendiente de corrección en la asignatura Matemáticas.</li>
+            <li><i class="fas fa-info-circle"></i> Consulta las nuevas directrices para el registro de notas.</li>
+        </ul>
+    </section>
+
+    <!-- Registro de Notas -->
+    <section class="section registro">
+        <h2><i class="fas fa-edit"></i> Registro de Notas</h2>
+        <form id="form-register-notas">
+            <label for="student-id">ID del Estudiante:</label>
+            <input type="text" id="student-id" placeholder="Ingrese el ID del estudiante" required>
+            <label for="subject">Asignatura:</label>
+            <input type="text" id="subject" placeholder="Ejemplo: Matemáticas" required>
+            <label for="grade">Nota:</label>
+            <input type="number" id="grade" step="0.01" min="0" max="5" placeholder="Ingrese la nota (0-5)" required>
+            <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Registrar Nota</button>
+        </form>
+    </section>
+
+    <!-- Consulta de Notas -->
+    <section class="section consulta">
+        <h2><i class="fas fa-search"></i> Consulta de Notas</h2>
+        <table class="styled-table" id="table-notas">
+            <thead>
+            <tr>
+                <th>ID del Estudiante</th>
+                <th>Asignatura</th>
+                <th>Nota</th>
+                <th>Estatus</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Aquí se cargarán dinámicamente las filas -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Validación y Envío al SNIES -->
+    <section class="section envio-snies">
+        <h2><i class="fas fa-paper-plane"></i> Validación y Envío de Calificaciones</h2>
+        <button id="btn-send-snies" class="btn-primary"><i class="fas fa-upload"></i> Enviar Calificaciones</button>
+        <p id="status-snies">Estado de Envío: <span>No enviado</span></p>
+    </section>
+
+    <!-- Corrección de Errores -->
+    <section class="section correccion">
+        <h2><i class="fas fa-tools"></i> Corrección de Errores</h2>
+        <form id="form-correction-snies">
+            <label for="correction">Detalle del Error:</label>
+            <input type="text" id="correction" placeholder="Ingrese los detalles del error" required>
+            <button type="submit" class="btn-secondary"><i class="fas fa-check"></i> Guardar Corrección</button>
+        </form>
+    </section>
+
+    <!-- Espacio para Imágenes -->
+    <section class="imagenes-section">
+        <h2><i class="fas fa-image"></i> ICESI</h2>
+        <div class="imagenes-container">
+            <div class="imagen">
+                <img src="images/snies.png" alt="Paso 1">
+            </div>
+            <div class="imagen">
+                <img src="images/Especializacion-en-Cirugia-General.jpg.webp" alt="Ejemplo 2">
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 GESNO. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,173 @@
+/* General */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9fb; /* Fondo claro */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #2A3340; /* Azul oscuro consistente */
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.navbar ul li a:hover {
+    color: #2A3340; /* Azul claro */
+}
+
+/* Main Container */
+.main-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+.section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    color: #2A3340; /* Azul oscuro consistente */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Tabla de Notas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #2A3340; /* Azul oscuro */
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Notificaciones */
+.notifications {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notifications h2 {
+    font-size: 1.8rem;
+    color: #2A3340; /* Azul oscuro consistente */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notification-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.notification {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9fb;
+}
+
+.notification h3 {
+    margin: 0 0 10px 0;
+    color: #2A3340; /* Azul oscuro */
+}
+
+.notification p {
+    margin: 0;
+    color: #2A3340;
+}
+
+/* Imagenes informativas */
+.imagenes-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.imagenes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.imagen {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.imagen img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Botones */
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #2A3340; /* Azul oscuro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2A3340; /* Azul más oscuro */
+}

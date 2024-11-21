@@ -4,28 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GESNO - Dashboard</title>
-    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="css/base.css">
 </head>
 <body>
-<div class="dashboard-container">
-    <header class="header">
-        <div class="logo">
-            <img src="https://www.icesi.edu.co/calipostalessonoras/images/logo_icesi-01.png" alt="Logo GESNO">
+<!-- Encabezado -->
+<header class="header">
+    <div class="logo">
+        <img src="images/logoIcesi2.png" alt="Logo Icesi">
+    </div>
+    <nav class="navbar">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="registro-notas.html">Registro Notas</a></li>
-                <li><a href="consulta.html">Consulta</a></li>
-                <li><a href="usuarios.html">Usuarios</a></li>
-                <li><a href="notificaciones.html">Notificaciones</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul id="menu">
+            <li><a href="student-panel.html">Panel Estudiantes</a></li>
+            <li><a href="admin-panel.html">Panel Profesores</a></li>
+            <li><a href="#" onclick="redirectToDashboard()">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+</header>
 
+<!-- Contenedor Principal -->
+<main class="main-container">
+    <!-- Imagen Estática -->
+    <section class="hero">
+        <div class="static-image-container">
+            <img src="images/posgrados.webp" alt="Postgrados">
+        </div>
+    </section>
+
+    <!-- Bienvenida y selección de panel -->
     <section class="hero">
         <h1>Bienvenido a GESNO</h1>
-        <p>Sistema de Gestión de Notas para estudiantes de postgrado</p>
+        <p>Sistema de Gestión de Notas para estudiantes y profesores.</p>
     </section>
-</div>
+
+    <section class="section">
+        <div class="panel-options">
+            <a href="student-panel.html" class="btn-primary">Panel Estudiantes</a>
+            <a href="admin-panel.html" class="btn-secondary">Panel Profesores</a>
+        </div>
+    </section>
+
+    <!-- Postgrados -->
+    <section class="postgrados">
+        <h2>Servicios</h2>
+        <div class="postgrados-grid">
+            <div class="service-card">
+                <img src="images/foto-destacada-especializacion-en-alergologia.jpg.webp" alt="Alergologia">
+                <h3>Especialización en Alergología</h3>
+                <button onclick="window.location.href='giro-internacional.html'">Registro SNIES: 104927</button>
+            </div>
+            <div class="service-card">
+                <img src="images/foto-destacada-anestesiologia.jpg.webp" alt="Anestesiologia">
+                <h3>"Especialización en Anestesiología"</h3>
+                <button onclick="window.location.href='cdt.html'">Registro SNIES: 106417</button>
+            </div>
+            <div class="service-card">
+                <img src="images/Especializacion-en-Cirugia-General.jpg.webp" alt="Cirugia general">
+                <h3>Especialización en Cirugía General</h3>
+                <button onclick="window.location.href='cuenta-del-bolsillo.html'">Registro SNIES: 111277</button>
+            </div>
+            <div class="service-card">
+                <img src="images/foto-destacada-reumatologia-pregrado.jpg.webp" alt="Reumatologia">
+                <h3>Especialización en Reumatología</h3>
+                <button onclick="window.location.href='cuenta-del-bolsillo.html'">Registro SNIES: 91011</button>
+            </div>
+            <div class="service-card">
+                <img src="images/Especializacion-en-Neurologia-destacada.jpg.webp" alt="Neurologia">
+                <h3>Especialización en Neurología</h3>
+                <button onclick="window.location.href='cuenta-del-bolsillo.html'">Registro SNIES: 106356</button>
+            </div>
+            <div class="service-card">
+                <img src="images/Especializacion-en-Endocrinologia-1.jpg.webp" alt="Endocrinologia">
+                <h3>Especialización en Endocrinología</h3>
+                <button onclick="window.location.href='educacion-financiera.html'">Registro SNIES: 109556</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo puedes hacerlo -->
+    <section class="how-to">
+        <h2>¿Cómo puedes hacerlo?</h2>
+        <div class="steps">
+            <div class="step">
+                <img src="images/snies.png" alt="Paso 1">
+                <p>Conoce cómo podrías ser beneficiario.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Pie de página -->
+<footer>
+    <p>&copy; 2024 GESNO. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+</script>
 </body>
 </html>
